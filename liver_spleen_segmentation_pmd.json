@@ -1,0 +1,164 @@
+{
+    "project_name": "Automated CT / MRI Liver-Spleen segmentation",
+    "project_id": "",
+    "version": "0",
+    "date_modified": "2022-04-04",
+    "objectives": {
+      "1": "Create algorithms for automated segmentation of the Liver and Spleen",
+      "2": "Compare model segmentation accuracy to inter- and intra-human segmentation accuracy on manually created masks",
+      "3": "Analyze demographic impact on model prediction",
+      "4": "Implement Clinically"
+    },
+    "team": {
+      "PI": "Alister Bates",
+      "Coinvestigators": [
+        "Samuel Brady",
+        "Ryan Moore"
+      ],
+      "Analysts": ["Zach Taylor", "Neeraja Mahalingan"],
+      "DataScientist": ["Aishwarya Vantipuli", "Madhieh Shabanian"],
+      "ITsupport": "TBD"
+    },
+    "resources": {
+      "storage": "2TB",
+      "compute": "4 CPU, 1 GPU POD",
+      "miscellaneous": {}
+    },
+    "datasets": [
+      {
+        "id": "1",
+        "data_url": "https:\\EW21-03918\\DL_Projects\\LiverSpleenSegmentation\\IRC279H",
+        "deidentification": "UNKNOWN",
+        "modalities": "MRI",
+        "scope": [
+          "",
+          ""
+        ],
+        "cohort_description": "IRC-279H",
+        "demographics": {
+          "total": "86",
+          "male": "49",
+          "female": "37",
+          "mean_age": "15 years"
+        },
+        "ground_truth": {
+          "entity": "segmentation mask",
+          "personnel": "UNKNOWN",
+          "tools": "UNKNOWN",
+          "uncertainties": "UNKNOWN"
+        }
+      },
+      {
+        "id": "2",
+        "data_url": "https:\\EW21-03918\\DL_Projects\\LiverSpleenSegmentation\\CT_CCHMC_processed",
+        "deidentification": "UNKNOWN",
+        "modalities": "CT",
+        "scope": [
+          "",
+          ""
+        ],
+        "cohort_description": "CCHMC CT",
+        "demographics": {
+          "total": "212",
+          "male": "103",
+          "female": "109",
+          "mean_age": "8 years"
+        },
+        "ground_truth": {
+          "entity": "segmentation mask",
+          "personnel": "UNKNOWN",
+          "tools": "UNKNOWN",
+          "uncertainties": "UNKNOWN"
+        }
+      },
+      {
+        "id": "3",
+        "data_url": "https:\\EW21-03918\\DL_Projects\\LiverSpleenSegmentation\\CHAOS_processed",
+        "deidentification": "UNKNOWN",
+        "modalities": ["CT", "MRI"],
+        "scope": [
+          "",
+          ""
+        ],
+        "cohort_description": "CHAOS",
+        "demographics": {
+          "total": "160",
+          "male": "N/A",
+          "female": "N/A",
+          "mean_age": "N/A"
+        },
+        "ground_truth": {
+          "entity": "segmentation mask",
+          "personnel": "UNKNOWN",
+          "tools": "UNKNOWN",
+          "uncertainties": "UNKNOWN"
+        }
+      },
+      {
+        "id": "4",
+        "data_url": "https:\\EW21-03918\\DL_Projects\\LiverSpleenSegmentation\\Liver Stiffness project",
+        "deidentification": "UNKNOWN",
+        "modalities": "MRI",
+        "scope": [
+          "",
+          ""
+        ],
+        "cohort_description": "Elastography",
+        "demographics": {
+          "total": "N/A",
+          "male": "N/A",
+          "female": "N/A",
+          "mean_age": "N/A"
+        },
+        "ground_truth": {
+          "entity": "segmentation mask",
+          "personnel": "UNKNOWN",
+          "tools": "UNKNOWN",
+          "uncertainties": "UNKNOWN"
+        }
+      }
+      
+    ],
+    "models": [
+      {
+        "id": "",
+        "description": "",
+        "training_data_id": "",
+        "code_url": "link to project folder",
+        "model_url": "link to model location",
+        "framework": "",
+        "model_inputs": [
+          "",
+          "",
+          ""
+        ],
+        "model_output": "segmentation",
+        "validation": {
+          "evaluation_metrics": [
+            "",
+            "Accuracy"
+          ],
+          "test_datasets": [
+            ""
+          ],
+          "transparency": {},
+          "bias": {},
+          "fairness": {},
+          "robustness": {}
+        }
+      }
+    ],
+    "deployments": [
+      {
+        "id": "",
+        "description": "",
+        "mode": "",
+        "model_id": "",
+        "serving_model_url": "url of the model for serving",
+        "deployment_configuration": "configuration file for deployment",
+        "deployment_hardware": "cloud/datacenter/edge",
+        "deployment_database": "Location where logs/metrics are stored",
+        "deployment_monitor":  "link to dashboards tracking model performance over time"
+      }
+      ]			
+  }
